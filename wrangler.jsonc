@@ -8,18 +8,24 @@
 	"main": "src/index.ts",
 	"compatibility_date": "2025-03-27",
 	"observability": {
-		"enabled": true
+		"enabled": true,
 	},
 	"vars": {
-		"APP_API_URL": "https://wr.do/api/v1/email-catcher",
-		"ENABLE_ATTACHMENTS": "1"
+		"APP_API_URL": "https://like.do/api/email/catcher",
+		"ENABLE_ATTACHMENTS": "1",
+		"SEND_API_KEY": "your_send_api_key_here",
 	},
 	"r2_buckets": [
 		{
 			"binding": "R2_BUCKET",
-			"bucket_name": "wremail"
-		}
-	]
+			"bucket_name": "wremail",
+		},
+	],
+	"send_email": [
+		{
+			"name": "SEND_EMAIL",
+		},
+	],
 	/**
 	 * Smart Placement
 	 * Docs: https://developers.cloudflare.com/workers/configuration/smart-placement/#smart-placement
